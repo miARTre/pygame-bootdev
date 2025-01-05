@@ -19,7 +19,7 @@ def main():
 
     player = Player(
         x = SCREEN_WIDTH / 2,
-        y = SCREEN_HEIGHT / 2
+        y = SCREEN_HEIGHT / 2,
     )
    
 
@@ -31,6 +31,9 @@ def main():
         screen.fill(pygame.Color('black'))      
         player.draw(screen)     
         pygame.display.flip()
+        
+        # rotate player to the left and right
+        player.update(dt)
         
         
         # limit the framerate to 60 FPS
